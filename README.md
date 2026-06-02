@@ -122,6 +122,11 @@ Bakı şəhəri üçün namaz vaxtlarını bildirən, Hicri təqvim, Ramazan rej
 | `/ramazan` | Ramazan təqvimi + oruc izləmə |
 | `/statistika` | Oruc statistikası və nailiyyətlər |
 | `/dua` | İftar / İmsak / Ramazan duaları |
+| `/namazlarim` | Namazlarım (Gündəlik namaz izləmə və statistika) |
+| `/quran` | Quran Menyusu və 114 surə oxunuşu |
+| `/sureler` | Namazda ən çox oxunan qısa surələr |
+| `/aye` | Gündəlik Quran ayəsi |
+| `/dualar` | Gündəlik dualar (Müsəlmanın Qalası) |
 | `/zikr` | Rəqəmsal Təsbeh (sayğac) |
 | `/qeza` | Qəza namazı hesablayıcısı |
 | `/teqvim` | Dini günlər təqvimi (2026) |

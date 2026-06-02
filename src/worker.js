@@ -7,6 +7,7 @@
 // ═══════════════════════════════════════════════════════════════
 
 // ─── Bundled JSON data ─────────────────────────────────────────
+import { QISA_SURELER, GUNUN_AYELERI, GUNDELIK_DUALAR, ALL_SURAHS, POPULAR_SURAHS } from './islamic_data.js';
 import data202601 from '../data/baku/2026-01.json';
 import data202602 from '../data/baku/2026-02.json';
 import data202603 from '../data/baku/2026-03.json';
@@ -207,6 +208,8 @@ const LOCALES = {
             btn_hijri: '📅 Hicri',
             btn_stats: '📊 Statistika',
             btn_dua: '🤲 Dua',
+            btn_quran: '📖 Quran',
+            btn_daily_duas: '🤲 Gündəlik Dualar',
             settings_title: '⚙️ <b>Bildiriş Ayarları</b>',
             settings_desc: 'Bildirişləri fərdiləşdirmək üçün\naşağıdakı düymələrə basın:',
             settings_active: '✅ = Aktiv  |  ❌ = Deaktiv',
@@ -302,6 +305,35 @@ const LOCALES = {
             prayer_undone: '↩️ {prayer} ləğv edildi',
             namazlarim_alldone: '🎉 Bütün namazlar qılındı! Allah qəbul etsin! 🤲',
             namazlarim_auto_qaza: '⚠️ Dünən {count} namaz qəzaya düşdü.',
+            // Namaz qaydası
+            btn_namaz_info: '🕌 Namaz Qaydası',
+            toast_namaz_info: '🕌 Namaz Qaydası',
+            namaz_info_title: '🕌 Namaz Qaydası',
+            namaz_info_table_title: '📊 Rükət Cədvəli',
+            namaz_info_detail_btn: '📖 Detallı qayda',
+            namaz_info_words_btn: '📿 Namazda oxunan dualar',
+            namaz_words_title: '📿 Namazda Oxunan Dualar',
+            namaz_detail_title: '📖 {prayer} — Qılınma Qaydası',
+            namaz_info_sunnet: 'sünnət',
+            namaz_info_farz: 'fərz',
+            namaz_info_vitr: 'vitr',
+            namaz_info_total: 'Cəmi',
+            namaz_info_footer: '💡 Detallı qayda üçün aşağıdakı düymələrə basın:',
+            // Namaz statistikası
+            btn_namaz_stats: '📊 Statistika',
+            namaz_stats_title: '📊 Namaz Statistikası',
+            namaz_stats_week: '📅 Son 7 gün',
+            namaz_stats_month: '📅 Son 30 gün',
+            namaz_stats_streak: '🔥 Cari ardıcıllıq',
+            namaz_stats_max_streak: '🏆 Rekord ardıcıllıq',
+            namaz_stats_total: '📿 Ümumi namaz',
+            namaz_stats_days: 'gün',
+            namaz_stats_prayers: 'namaz',
+            namaz_stats_no_data: '📋 Hələ namaz qeydi yoxdur.\nNamazlarım bölməsindən namazları işarələməyə başlayın!',
+            namaz_stats_achievements: '🏆 Nailiyyətlər',
+            namaz_stats_locked: '🔒',
+            namaz_stats_earned: '✅',
+            toast_namaz_stats: '📊 Statistika',
         },
     },
     tr: {
@@ -369,6 +401,8 @@ const LOCALES = {
             btn_hijri: '📅 Hicri',
             btn_stats: '📊 İstatistik',
             btn_dua: '🤲 Dua',
+            btn_quran: '📖 Kur\'an',
+            btn_daily_duas: '🤲 Günlük Dualar',
             settings_title: '⚙️ <b>Bildirim Ayarları</b>',
             settings_desc: 'Bildirimleri özelleştirmek için\naşağıdaki butonlara basın:',
             settings_active: '✅ = Aktif  |  ❌ = Deaktif',
@@ -464,6 +498,35 @@ const LOCALES = {
             prayer_undone: '↩️ {prayer} iptal edildi',
             namazlarim_alldone: '🎉 Tüm namazlar kılındı! Allah kabul etsin! 🤲',
             namazlarim_auto_qaza: '⚠️ Dün {count} namaz kazaya düştü.',
+            // Namaz kılavuzu
+            btn_namaz_info: '🕌 Namaz Kılavuzu',
+            toast_namaz_info: '🕌 Namaz Kılavuzu',
+            namaz_info_title: '🕌 Namaz Kılavuzu',
+            namaz_info_table_title: '📊 Rekât Tablosu',
+            namaz_info_detail_btn: '📖 Detaylı kılavuz',
+            namaz_info_words_btn: '📿 Namazda okunan dualar',
+            namaz_words_title: '📿 Namazda Okunan Dualar',
+            namaz_detail_title: '📖 {prayer} — Kılınış Şekli',
+            namaz_info_sunnet: 'sünnet',
+            namaz_info_farz: 'farz',
+            namaz_info_vitr: 'vitir',
+            namaz_info_total: 'Toplam',
+            namaz_info_footer: '💡 Detaylı kılavuz için aşağıdaki butonlara basın:',
+            // Namaz istatistiği
+            btn_namaz_stats: '📊 İstatistik',
+            namaz_stats_title: '📊 Namaz İstatistiği',
+            namaz_stats_week: '📅 Son 7 gün',
+            namaz_stats_month: '📅 Son 30 gün',
+            namaz_stats_streak: '🔥 Mevcut seri',
+            namaz_stats_max_streak: '🏆 Rekor seri',
+            namaz_stats_total: '📿 Toplam namaz',
+            namaz_stats_days: 'gün',
+            namaz_stats_prayers: 'namaz',
+            namaz_stats_no_data: '📋 Henüz namaz kaydı yok.\nNamazlarım bölümünden namazları işaretlemeye başlayın!',
+            namaz_stats_achievements: '🏆 Başarılar',
+            namaz_stats_locked: '🔒',
+            namaz_stats_earned: '✅',
+            toast_namaz_stats: '📊 İstatistik',
         },
     },
 };
@@ -548,8 +611,8 @@ const RAMADAN_DUAS_TR = {
     umumiDua: '🤲 <b>Ramazan Duası:</b>\n\n"Allahümme edhilhu aleyna bil-emni vel-imani ves-selameti vel-islami ve ridallahi ve ridvanih."\n\n<i>Anlamı: Allahım! Bu ayı bize emniyet, iman, selamet, İslam ve Senin rızan ile nasip et.</i>',
 };
 
-// Qadr gecəsi ehtimal olunan gecələr (Ramazanın tək gecələri)
-const QADR_NIGHTS = [21, 23, 25, 27, 29];
+// Qadr gecəsi ehtimal olunan gecələr
+const QADR_NIGHTS = [19, 21, 23];
 
 // Gündəlik hədis/ayələr (30 gün üçün)
 const RAMADAN_DAILY_QUOTES = [
@@ -592,7 +655,7 @@ const ACHIEVEMENTS = [
     { id: 'streak7', emoji: '⚡', name: '7 Gün Ardıcıl', name_tr: '7 Gün Ard Arda', desc: '1 həftə ardıcıl oruc', desc_tr: '1 hafta ard arda oruç', check: (s) => s.maxStreak >= 7 },
     { id: 'half', emoji: '💪', name: 'Yarısı Tamam', name_tr: 'Yarısı Tamam', desc: '15 gün oruc tutdun', desc_tr: '15 gün oruç tuttun', check: (s) => s.fasted >= 15 },
     { id: 'full', emoji: '🏆', name: 'Tam Ramazan', name_tr: 'Tam Ramazan', desc: 'Bütün 30 günü tutdun', desc_tr: 'Tüm 30 günü tuttun', check: (s) => s.fasted >= 30 },
-    { id: 'qadr', emoji: '⭐', name: 'Qadr Gecələri', name_tr: 'Kadir Geceleri', desc: 'Bütün Qadr gecələrində oruc', desc_tr: 'Tüm Kadir gecelerinde oruç', check: (s) => s.qadrFasted === 5 },
+    { id: 'qadr', emoji: '⭐', name: 'Qadr Gecələri', name_tr: 'Kadir Geceleri', desc: 'Bütün Qadr gecələrində oruc', desc_tr: 'Tüm Kadir gecelerinde oruç', check: (s) => s.qadrFasted === 3 },
 ];
 
 const MOTIVASIYA_MESAJLARI = [
@@ -853,6 +916,209 @@ const QEZA_PRAYERS = [
     { id: 'vitr', name: '🌙 Vitr', name_tr: '🌙 Vitir' },
 ];
 
+// ─── Namaz Qılınma Qaydası və Rükət Sayları ────────────────────
+const PRAYER_INFO = {
+    az: [
+        {
+            id: 'subh', name: '🌅 Sübh namazı', farz: 2, sunnet_before: 2, sunnet_after: 0, vitr: 0, total: 4,
+            summary: '2 rükət sünnət + 2 rükət fərz = 4 rükət',
+            steps: [
+                '1️⃣ <b>İlk sünnət (2 rükət):</b>',
+                '   • Niyyət: "Niyyət etdim Sübh namazının sünnətini qılmağa"',
+                '   • Təkbir → Subhanəkə → Fatihə + Surə → Rüku → Səcdə',
+                '   • 2-ci rükət: Fatihə + Surə → Rüku → Səcdə → Təşəhhüd → Salam',
+                '',
+                '2️⃣ <b>Fərz (2 rükət):</b>',
+                '   • Niyyət: "Niyyət etdim Sübh namazının fərzini qılmağa"',
+                '   • Təkbir → Subhanəkə → Fatihə + Surə → Rüku → Səcdə',
+                '   • 2-ci rükət: Fatihə + Surə → Rüku → Səcdə → Təşəhhüd + Salavat → Salam',
+            ],
+        },
+        {
+            id: 'zohr', name: '☀️ Zöhr namazı', farz: 4, sunnet_before: 4, sunnet_after: 2, vitr: 0, total: 10,
+            summary: '4 rükət ilk sünnət + 4 rükət fərz + 2 rükət son sünnət = 10 rükət',
+            steps: [
+                '1️⃣ <b>İlk sünnət (4 rükət):</b>',
+                '   • Niyyət: "Niyyət etdim Zöhr namazının ilk sünnətini qılmağa"',
+                '   • 1-2-ci rükət: Fatihə + Surə → Təşəhhüd',
+                '   • 3-4-cü rükət: Fatihə + Surə → Təşəhhüd + Salavat → Salam',
+                '',
+                '2️⃣ <b>Fərz (4 rükət):</b>',
+                '   • Niyyət: "Niyyət etdim Zöhr namazının fərzini qılmağa"',
+                '   • 1-2-ci rükət: Fatihə + Surə → Təşəhhüd',
+                '   • 3-4-cü rükət: Yalnız Fatihə → Təşəhhüd + Salavat → Salam',
+                '',
+                '3️⃣ <b>Son sünnət (2 rükət):</b>',
+                '   • Niyyət: "Niyyət etdim Zöhr namazının son sünnətini qılmağa"',
+                '   • 2 rükət: Fatihə + Surə → Təşəhhüd + Salavat → Salam',
+            ],
+        },
+        {
+            id: 'esr', name: '🌤️ Əsr namazı', farz: 4, sunnet_before: 0, sunnet_after: 0, vitr: 0, total: 4,
+            summary: '4 rükət fərz = 4 rükət',
+            steps: [
+                '1️⃣ <b>Fərz (4 rükət):</b>',
+                '   • Niyyət: "Niyyət etdim Əsr namazının fərzini qılmağa"',
+                '   • 1-2-ci rükət: Fatihə + Surə → Təşəhhüd',
+                '   • 3-4-cü rükət: Yalnız Fatihə → Təşəhhüd + Salavat → Salam',
+            ],
+        },
+        {
+            id: 'meqrib', name: '🌇 Məğrib namazı', farz: 3, sunnet_before: 0, sunnet_after: 2, vitr: 0, total: 5,
+            summary: '3 rükət fərz + 2 rükət sünnət = 5 rükət',
+            steps: [
+                '1️⃣ <b>Fərz (3 rükət):</b>',
+                '   • Niyyət: "Niyyət etdim Məğrib namazının fərzini qılmağa"',
+                '   • 1-2-ci rükət: Fatihə + Surə → Təşəhhüd',
+                '   • 3-cü rükət: Yalnız Fatihə → Təşəhhüd + Salavat → Salam',
+                '',
+                '2️⃣ <b>Sünnət (2 rükət):</b>',
+                '   • Niyyət: "Niyyət etdim Məğrib namazının sünnətini qılmağa"',
+                '   • 2 rükət: Fatihə + Surə → Təşəhhüd + Salavat → Salam',
+            ],
+        },
+        {
+            id: 'isha', name: '🌃 İşa namazı', farz: 4, sunnet_before: 0, sunnet_after: 2, vitr: 3, total: 9,
+            summary: '4 rükət fərz + 2 rükət sünnət + 3 rükət vitr = 9 rükət',
+            steps: [
+                '1️⃣ <b>Fərz (4 rükət):</b>',
+                '   • Niyyət: "Niyyət etdim İşa namazının fərzini qılmağa"',
+                '   • 1-2-ci rükət: Fatihə + Surə → Təşəhhüd',
+                '   • 3-4-cü rükət: Yalnız Fatihə → Təşəhhüd + Salavat → Salam',
+                '',
+                '2️⃣ <b>Sünnət (2 rükət):</b>',
+                '   • Niyyət: "Niyyət etdim İşa namazının sünnətini qılmağa"',
+                '   • 2 rükət: Fatihə + Surə → Təşəhhüd + Salavat → Salam',
+                '',
+                '3️⃣ <b>Vitr namazı (3 rükət — vacib):</b>',
+                '   • Niyyət: "Niyyət etdim Vitr namazını qılmağa"',
+                '   • 1-2-ci rükət: Fatihə + Surə → Təşəhhüd',
+                '   • 3-cü rükət: Fatihə + Surə → Qunut duası → Rüku → Səcdə → Təşəhhüd + Salavat → Salam',
+            ],
+        },
+    ],
+    tr: [
+        {
+            id: 'subh', name: '🌅 Sabah namazı', farz: 2, sunnet_before: 2, sunnet_after: 0, vitr: 0, total: 4,
+            summary: '2 rekât sünnet + 2 rekât farz = 4 rekât',
+            steps: [
+                '1️⃣ <b>İlk sünnet (2 rekât):</b>',
+                '   • Niyet: "Niyet ettim Sabah namazının sünnetini kılmaya"',
+                '   • Tekbir → Sübhaneke → Fatiha + Sure → Rükû → Secde',
+                '   • 2. rekât: Fatiha + Sure → Rükû → Secde → Tahiyyat → Selam',
+                '',
+                '2️⃣ <b>Farz (2 rekât):</b>',
+                '   • Niyet: "Niyet ettim Sabah namazının farzını kılmaya"',
+                '   • Tekbir → Sübhaneke → Fatiha + Sure → Rükû → Secde',
+                '   • 2. rekât: Fatiha + Sure → Rükû → Secde → Tahiyyat + Salavat → Selam',
+            ],
+        },
+        {
+            id: 'zohr', name: '☀️ Öğle namazı', farz: 4, sunnet_before: 4, sunnet_after: 2, vitr: 0, total: 10,
+            summary: '4 rekât ilk sünnet + 4 rekât farz + 2 rekât son sünnet = 10 rekât',
+            steps: [
+                '1️⃣ <b>İlk sünnet (4 rekât):</b>',
+                '   • Niyet: "Niyet ettim Öğle namazının ilk sünnetini kılmaya"',
+                '   • 1-2. rekât: Fatiha + Sure → Tahiyyat',
+                '   • 3-4. rekât: Fatiha + Sure → Tahiyyat + Salavat → Selam',
+                '',
+                '2️⃣ <b>Farz (4 rekât):</b>',
+                '   • Niyet: "Niyet ettim Öğle namazının farzını kılmaya"',
+                '   • 1-2. rekât: Fatiha + Sure → Tahiyyat',
+                '   • 3-4. rekât: Sadece Fatiha → Tahiyyat + Salavat → Selam',
+                '',
+                '3️⃣ <b>Son sünnet (2 rekât):</b>',
+                '   • Niyet: "Niyet ettim Öğle namazının son sünnetini kılmaya"',
+                '   • 2 rekât: Fatiha + Sure → Tahiyyat + Salavat → Selam',
+            ],
+        },
+        {
+            id: 'esr', name: '🌤️ İkindi namazı', farz: 4, sunnet_before: 0, sunnet_after: 0, vitr: 0, total: 4,
+            summary: '4 rekât farz = 4 rekât',
+            steps: [
+                '1️⃣ <b>Farz (4 rekât):</b>',
+                '   • Niyet: "Niyet ettim İkindi namazının farzını kılmaya"',
+                '   • 1-2. rekât: Fatiha + Sure → Tahiyyat',
+                '   • 3-4. rekât: Sadece Fatiha → Tahiyyat + Salavat → Selam',
+            ],
+        },
+        {
+            id: 'meqrib', name: '🌇 Akşam namazı', farz: 3, sunnet_before: 0, sunnet_after: 2, vitr: 0, total: 5,
+            summary: '3 rekât farz + 2 rekât sünnet = 5 rekât',
+            steps: [
+                '1️⃣ <b>Farz (3 rekât):</b>',
+                '   • Niyet: "Niyet ettim Akşam namazının farzını kılmaya"',
+                '   • 1-2. rekât: Fatiha + Sure → Tahiyyat',
+                '   • 3. rekât: Sadece Fatiha → Tahiyyat + Salavat → Selam',
+                '',
+                '2️⃣ <b>Sünnet (2 rekât):</b>',
+                '   • Niyet: "Niyet ettim Akşam namazının sünnetini kılmaya"',
+                '   • 2 rekât: Fatiha + Sure → Tahiyyat + Salavat → Selam',
+            ],
+        },
+        {
+            id: 'isha', name: '🌃 Yatsı namazı', farz: 4, sunnet_before: 0, sunnet_after: 2, vitr: 3, total: 9,
+            summary: '4 rekât farz + 2 rekât sünnet + 3 rekât vitir = 9 rekât',
+            steps: [
+                '1️⃣ <b>Farz (4 rekât):</b>',
+                '   • Niyet: "Niyet ettim Yatsı namazının farzını kılmaya"',
+                '   • 1-2. rekât: Fatiha + Sure → Tahiyyat',
+                '   • 3-4. rekât: Sadece Fatiha → Tahiyyat + Salavat → Selam',
+                '',
+                '2️⃣ <b>Sünnet (2 rekât):</b>',
+                '   • Niyet: "Niyet ettim Yatsı namazının sünnetini kılmaya"',
+                '   • 2 rekât: Fatiha + Sure → Tahiyyat + Salavat → Selam',
+                '',
+                '3️⃣ <b>Vitir namazı (3 rekât — vacip):</b>',
+                '   • Niyet: "Niyet ettim Vitir namazını kılmaya"',
+                '   • 1-2. rekât: Fatiha + Sure → Tahiyyat',
+                '   • 3. rekât: Fatiha + Sure → Kunut duası → Rükû → Secde → Tahiyyat + Salavat → Selam',
+            ],
+        },
+    ],
+};
+
+const PRAYER_WORDS = {
+    az: [
+        { title: '1️⃣ İftitah Təkbiri', text: '🕌 Əlləri qulaq səviyyəsinə qaldırıb deyilir:\n\n<b>\"Allahu Əkbər\"</b>\n<i>(Allah ən böyükdür)</i>' },
+        { title: '2️⃣ Subhanəkə Duası', text: '<b>\"Subhanəkə Allahummə və bihamdikə və təbarəkəsmukə və təalə cəddukə və lə iləhə ğayrukə\"</b>\n\n<i>Mənası: Allahım! Sən pak və müqəddəssən. Sənə həmd olsun. Sənin adın mübarəkdir. Şanın ucadır. Səndən başqa ilah yoxdur.</i>' },
+        { title: '3️⃣ Əuzu-Bismillah', text: '<b>\"Əuzu billəhi minəş-şeytanir-racim. Bismilləhir-Rəhmanir-Rəhim\"</b>\n\n<i>Mənası: Qovulmuş şeytandan Allaha sığınıram. Mərhəmətli, Rəhmli Allahın adı ilə.</i>' },
+        { title: '4️⃣ Fatihə Surəsi', text: '<b>\"Əlhəmdu lilləhi Rabbil-aləmin. Ər-Rəhmanir-Rəhim. Maliki yəvmid-din. İyyakə nə\'budu və iyyakə nəstəin. İhdinəs-siratəl-mustəqim. Siratəlləzinə ən\'amtə ələyhim. Ğayril-məğdubi ələyhim və ləd-dallin. Amin.\"</b>\n\n<i>Mənası: Həmd aləmlərin Rəbbi Allaha məxsusdur. Rəhman və Rəhimdir. Haqq-hesab gününün sahibidir. Yalnız Sənə ibadət edir, yalnız Səndən kömək diləyirik. Bizi doğru yola hidayət et. Nemət verdiklərinin yoluna, qəzəbə düçar olanların və azanların yoluna deyil.</i>' },
+        { title: '5️⃣ Qısa Surə (İxlas)', text: '<b>\"Qul huvəllahu əhəd. Allahus-saməd. Ləm yəlid və ləm yuləd. Və ləm yəkun ləhu kufuvən əhəd.\"</b>\n\n<i>Mənası: De: O, Allah Təkdir. Allah Saməd-dir (heç bir şeyə ehtiyacı yoxdur). O, doğmayıb və doğulmayıb. Heç bir şey Ona tay deyildir.</i>' },
+        { title: '6️⃣ Rüku (əyilmə)', text: 'Əyilib əlləri dizlərə qoyub <b>3 dəfə</b> deyilir:\n\n<b>\"Subhanə Rabbiyəl-Azim\"</b>\n<i>(Uca Rəbbimi təsbih edirəm)</i>' },
+        { title: '7️⃣ Qiyam (rükudan qalxma)', text: 'Qalxarkən deyilir:\n<b>\"Səmiallahu limən hamidəh\"</b>\n<i>(Allah Özünə həmd edəni eşidər)</i>\n\nDik durub deyilir:\n<b>\"Rabbənə ləkəl-həmd\"</b>\n<i>(Rəbbimiz, həmd Sənədir)</i>' },
+        { title: '8️⃣ Səcdə', text: 'Yerə enib alın, burun, əllər, dizlər və ayaq barmaqları yerə dəyməlidir. <b>3 dəfə</b> deyilir:\n\n<b>\"Subhanə Rabbiyəl-Ala\"</b>\n<i>(Ən uca Rəbbimi təsbih edirəm)</i>\n\n📌 Hər rükətdə <b>2 səcdə</b> edilir.' },
+        { title: '9️⃣ Təşəhhüd (Əttəhiyyat)', text: '<b>\"Əttəhiyyatu lilləhi vəs-saləvatu vat-tayyibat. Əssəlamu ələykə əyyuhən-nəbiyyu və rahmətullahi və bərakətuh. Əssəlamu ələynə və alə ibadilləhis-salihin. Əşhədu ən lə iləhə illəllah və əşhədu ənnə Muhammədən abduhu və rasuluh.\"</b>\n\n<i>Mənası: Bütün salamlar, dualar və gözəl sözlər Allaha aiddir. Ey Peyğəmbər! Allahın salamı, rəhməti və bərəkəti sənə olsun. Salam bizə və Allahın saleh qullarına olsun. Şəhadət edirəm ki, Allahdan başqa ilah yoxdur və Muhəmməd Onun qulu və elçisidir.</i>' },
+        { title: '🔟 Salavat', text: '<b>\"Allahummə salli alə Muhammadin və alə ali Muhammad. Kəmə salləytə alə İbrahimə və alə ali İbrahim. İnnəkə həmidun məcid.\n\nAllahummə barik alə Muhammadin və alə ali Muhammad. Kəmə baraktə alə İbrahimə və alə ali İbrahim. İnnəkə həmidun məcid.\"</b>\n\n<i>Mənası: Allahım! İbrahimə və ailəsinə xeyir-dua verdiyin kimi, Muhammədə və ailəsinə də xeyir-dua ver. Allahım! İbrahimi və ailəsini mübarək qıldığın kimi, Muhammədə və ailəsini də mübarək qıl.</i>' },
+        { title: '1️⃣1️⃣ Rabbənə Duası', text: '<b>\"Rabbənə atinə fid-dunyə hasənətən və fil-axirəti hasənətən və qinə azəbən-nar.\"</b>\n\n<i>Mənası: Rəbbimiz! Bizə dünyada da, axirətdə də gözəllik ver və bizi Cəhənnəm əzabından qoru.</i>' },
+        { title: '1️⃣2️⃣ Salam', text: 'Əvvəlcə sağa, sonra sola başı çevirərək deyilir:\n\n<b>\"Əssəlamu ələykum və rahmətullah\"</b>\n<i>(Allahın salamı və rəhməti sizə olsun)</i>' },
+    ],
+    tr: [
+        { title: '1️⃣ İftitah Tekbiri', text: '🕌 Elleri kulak hizasına kaldırıp denir:\n\n<b>\"Allahu Ekber\"</b>\n<i>(Allah en büyüktür)</i>' },
+        { title: '2️⃣ Sübhaneke Duası', text: '<b>\"Sübhaneke Allahümme ve bihamdike ve tebarekesmüke ve teala ceddüke ve la ilahe gayrüke\"</b>\n\n<i>Anlamı: Allahım! Sen pak ve mukaddessin. Sana hamd olsun. Senin adın mübarektir. Şanın yücedir. Senden başka ilah yoktur.</i>' },
+        { title: '3️⃣ Euzü-Besmele', text: '<b>\"Euzü billahi mineş-şeytanir-racim. Bismillahir-Rahmanir-Rahim\"</b>\n\n<i>Anlamı: Kovulmuş şeytandan Allah\'a sığınırım. Merhametli, Rahîm olan Allah\'ın adıyla.</i>' },
+        { title: '4️⃣ Fatiha Suresi', text: '<b>\"Elhamdü lillahi Rabbil-alemin. Er-Rahmanir-Rahim. Maliki yevmid-din. İyyake na\'büdü ve iyyake nestain. İhdinas-siratal-müstekim. Siratallezine en\'amte aleyhim. Gayril-mağdubi aleyhim ve led-dallin. Amin.\"</b>\n\n<i>Anlamı: Hamd âlemlerin Rabbi Allah\'a mahsustur. Rahman ve Rahîm\'dir. Hesap gününün sahibidir. Yalnız Sana ibadet eder, yalnız Senden yardım dileriz. Bizi doğru yola ilet. Nimet verdiklerinin yoluna, gazaba uğrayanların ve sapıtanların yoluna değil.</i>' },
+        { title: '5️⃣ Kısa Sure (İhlas)', text: '<b>\"Kul hüvallahü ehad. Allahüs-samed. Lem yelid ve lem yuled. Ve lem yekün lehü küfüven ehad.\"</b>\n\n<i>Anlamı: De ki: O, Allah Bir\'dir. Allah Samed\'dir (hiçbir şeye ihtiyacı yoktur). O, doğmamış ve doğurulmamıştır. Hiçbir şey O\'na denk değildir.</i>' },
+        { title: '6️⃣ Rükû (eğilme)', text: 'Eğilip elleri dizlere koyarak <b>3 kere</b> denir:\n\n<b>\"Sübhane Rabbiyel-Azîm\"</b>\n<i>(Yüce Rabbimi tesbih ederim)</i>' },
+        { title: '7️⃣ Kıyam (rükûdan kalkma)', text: 'Kalkarken denir:\n<b>\"Semiallahü limen hamideh\"</b>\n<i>(Allah kendisine hamd edeni işitir)</i>\n\nDik durarak denir:\n<b>\"Rabbena lekel-hamd\"</b>\n<i>(Rabbimiz, hamd Sana\'dır)</i>' },
+        { title: '8️⃣ Secde', text: 'Yere kapanıp alın, burun, eller, dizler ve ayak parmakları yere değmelidir. <b>3 kere</b> denir:\n\n<b>\"Sübhane Rabbiyel-A\'lâ\"</b>\n<i>(En yüce Rabbimi tesbih ederim)</i>\n\n📌 Her rekâtta <b>2 secde</b> yapılır.' },
+        { title: '9️⃣ Tahiyyat (Ettehiyyatü)', text: '<b>\"Ettehiyyatü lillahi ves-salevatu vet-tayyibat. Esselamu aleyke eyyühen-nebiyyü ve rahmetullahi ve berakatüh. Esselamu aleyna ve ala ibadillahis-salihin. Eşhedü en la ilahe illallah ve eşhedü enne Muhammeden abdühü ve rasulüh.\"</b>\n\n<i>Anlamı: Bütün selamlar, dualar ve güzel sözler Allah\'a aittir. Ey Peygamber! Allah\'ın selamı, rahmeti ve bereketi senin üzerine olsun. Selam bize ve Allah\'ın salih kullarına olsun. Şehadet ederim ki Allah\'tan başka ilah yoktur ve Muhammed O\'nun kulu ve elçisidir.</i>' },
+        { title: '🔟 Salavat', text: '<b>\"Allahümme salli ala Muhammedin ve ala ali Muhammed. Kema salleyte ala İbrahime ve ala ali İbrahim. İnneke hamidün mecid.\n\nAllahümme barik ala Muhammedin ve ala ali Muhammed. Kema barekte ala İbrahime ve ala ali İbrahim. İnneke hamidün mecid.\"</b>\n\n<i>Anlamı: Allahım! İbrahim\'e ve ailesine rahmet ettiğin gibi, Muhammed\'e ve ailesine de rahmet et. Allahım! İbrahim\'i ve ailesini mübarek kıldığın gibi, Muhammed ve ailesini de mübarek kıl.</i>' },
+        { title: '1️⃣1️⃣ Rabbena Duası', text: '<b>\"Rabbena atina fid-dünya haseneten ve fil-ahireti haseneten ve kına azaben-nar.\"</b>\n\n<i>Anlamı: Rabbimiz! Bize dünyada da, ahirette de güzellik ver ve bizi Cehennem azabından koru.</i>' },
+        { title: '1️⃣2️⃣ Selam', text: 'Önce sağa, sonra sola baş çevirerek denir:\n\n<b>\"Esselamu aleykum ve rahmetullah\"</b>\n<i>(Allah\'ın selamı ve rahmeti üzerinize olsun)</i>' },
+    ],
+};
+
+// ─── Namaz Statistika Nailiyyətləri ─────────────────────────────
+const NAMAZ_ACHIEVEMENTS = [
+    { id: 'first_step', emoji: '🥉', name_az: 'İlk Addım', name_tr: 'İlk Adım', desc_az: '3 gün ardıcıl bütün namazlar qılındı', desc_tr: '3 gün ard arda tüm namazlar kılındı', check: (s) => s.currentStreak >= 3 || s.maxStreak >= 3 },
+    { id: 'consistent', emoji: '🥈', name_az: 'Davamlılıq', name_tr: 'Kararlılık', desc_az: '7 gün ardıcıl bütün namazlar qılındı', desc_tr: '7 gün ard arda tüm namazlar kılındı', check: (s) => s.currentStreak >= 7 || s.maxStreak >= 7 },
+    { id: 'responsible', emoji: '🥇', name_az: 'Məsuliyyətli', name_tr: 'Sorumluluk', desc_az: '15 gün ardıcıl bütün namazlar qılındı', desc_tr: '15 gün ard arda tüm namazlar kılındı', check: (s) => s.currentStreak >= 15 || s.maxStreak >= 15 },
+    { id: 'guardian', emoji: '💎', name_az: 'Namaz Mühafizi', name_tr: 'Namaz Muhafızı', desc_az: '30 gün ardıcıl bütün namazlar qılındı', desc_tr: '30 gün ard arda tüm namazlar kılındı', check: (s) => s.currentStreak >= 30 || s.maxStreak >= 30 },
+    { id: 'devotion', emoji: '🌟', name_az: 'İbadət Sevgisi', name_tr: 'İbadet Sevgisi', desc_az: 'Ümumilikdə 100 namaz tamamlandı', desc_tr: 'Toplamda 100 namaz tamamlandı', check: (s) => s.totalPrayers >= 100 },
+    { id: 'dedication', emoji: '🔥', name_az: 'Fədakarlıq', name_tr: 'Adanmışlık', desc_az: 'Ümumilikdə 500 namaz tamamlandı', desc_tr: 'Toplamda 500 namaz tamamlandı', check: (s) => s.totalPrayers >= 500 },
+];
+
 // ─── 2026 Dini Günlər Təqvimi ──────────────────────────────────
 const RELIGIOUS_DAYS_2026 = [
     { date: '2025-12-21', name: '🌙 Rəcəb ayının başlanğıcı', name_tr: '🌙 Recep ayının başlangıcı', desc: 'Üç mübarək ayın birincisi (1 Rəcəb 1447)', desc_tr: 'Üç mübarek ayın birincisi (1 Recep 1447)' },
@@ -861,10 +1127,9 @@ const RELIGIOUS_DAYS_2026 = [
     { date: '2026-01-20', name: '🌙 Şaban ayının başlanğıcı', name_tr: '🌙 Şaban ayının başlangıcı', desc: 'Ramazandan əvvəlki ay (1 Şaban 1447)', desc_tr: 'Ramazan\'dan önceki ay (1 Şaban 1447)' },
     { date: '2026-02-03', name: '⭐ Bərat Gecəsi (Şaban 15)', name_tr: '⭐ Berat Gecesi (Şaban 15)', desc: 'Bağışlanma gecəsi', desc_tr: 'Bağışlanma gecesi' },
     { date: '2026-02-19', name: '🌙 Ramazan başlanğıcı', name_tr: '🌙 Ramazan başlangıcı', desc: '1447 Hicri — Oruc ayı', desc_tr: '1447 Hicri — Oruç ayı' },
-    { date: '2026-03-08', name: '⭐ Qadr Gecəsi (21-ci gecə)', name_tr: '⭐ Kadir Gecesi (21. gece)', desc: 'Ehtimal olunan Qadr gecələrindən biri', desc_tr: 'Muhtemel Kadir gecelerinden biri' },
-    { date: '2026-03-10', name: '⭐ Qadr Gecəsi (23-cü gecə)', name_tr: '⭐ Kadir Gecesi (23. gece)', desc: 'Ehtimal olunan Qadr gecələrindən biri', desc_tr: 'Muhtemel Kadir gecelerinden biri' },
-    { date: '2026-03-12', name: '⭐ Qadr Gecəsi (25-ci gecə)', name_tr: '⭐ Kadir Gecesi (25. gece)', desc: 'Ehtimal olunan Qadr gecələrindən biri', desc_tr: 'Muhtemel Kadir gecelerinden biri' },
-    { date: '2026-03-16', name: '⭐ Qadr Gecəsi (27-ci gecə)', name_tr: '⭐ Kadir Gecesi (27. gece)', desc: 'Ən ehtimallı Qadr gecəsi — min aydan xeyirli', desc_tr: 'En muhtemel Kadir gecesi — bin aydan hayırlı' },
+    { date: '2026-03-08', name: '⭐ Qadr Gecəsi (19-cu gecə)', name_tr: '⭐ Kadir Gecesi (19. gece)', desc: '18-dən 19-na keçən əhya gecəsi', desc_tr: '18\'den 19\'una bağlayan gece (İhya)' },
+    { date: '2026-03-10', name: '⭐ Qadr Gecəsi (21-ci gecə)', name_tr: '⭐ Kadir Gecesi (21. gece)', desc: '20-dən 21-nə keçən əhya gecəsi', desc_tr: '20\'den 21\'ine bağlayan gece (İhya)' },
+    { date: '2026-03-12', name: '⭐ Qadr Gecəsi (23-cü gecə)', name_tr: '⭐ Kadir Gecesi (23. gece)', desc: '22-dən 23-nə keçən əhya gecəsi', desc_tr: '22\'den 23\'üne bağlayan gece (İhya)' },
     { date: '2026-03-20', name: '🎉 Ramazan Bayramı (1-ci gün)', name_tr: '🎉 Ramazan Bayramı (1. gün)', desc: 'Fitr bayramı — rəsmi qeyri-iş günü', desc_tr: 'Ramazan Bayramı — resmi tatil günü' },
     { date: '2026-03-21', name: '🎉 Ramazan Bayramı (2-ci gün)', name_tr: '🎉 Ramazan Bayramı (2. gün)', desc: 'Fitr bayramı — rəsmi qeyri-iş günü', desc_tr: 'Ramazan Bayramı — resmi tatil günü' },
     { date: '2026-05-26', name: '🕋 Ərəfə günü', name_tr: '🕋 Arefe günü', desc: 'Qurban bayramı ərəfəsi — oruc tutmaq savablıdır', desc_tr: 'Kurban bayramı arefesi — oruç tutmak sevaptır' },
@@ -1610,9 +1875,10 @@ function getMainMenuKeyboard(lang = 'az') {
         ],
     ];
 
-    // Namazlarım düyməsi (həmişə göstər)
+    // Namazlarım və Namaz Qaydası düymələri (həmişə göstər)
     keyboard.push([
         { text: t('btn_namazlarim', lang), callback_data: 'cmd_namazlarim' },
+        { text: t('btn_namaz_info', lang), callback_data: 'cmd_namaz_info' },
     ]);
 
     // Ramazan datası olan il üçün həmişə göstər
@@ -1649,6 +1915,10 @@ function getSecondaryMenuKeyboard(lang = 'az') {
         [
             { text: t('btn_asma', lang), callback_data: 'cmd_asma' },
             { text: t('btn_friday', lang), callback_data: 'cmd_cume' },
+        ],
+        [
+            { text: t('btn_quran', lang), callback_data: 'cmd_quran_menu' },
+            { text: t('btn_daily_duas', lang), callback_data: 'cmd_dualar_menu' },
         ],
         [
             { text: t('btn_hijri', lang), callback_data: 'cmd_cevir_today' },
@@ -2026,6 +2296,146 @@ async function cmdAy(botToken, chatId, argText, env) {
 
 // Qiblə funksiyası silindi (v2.0 — sadələşdirilmə)
 
+// ═══════════════════════════════════════════════════════════════
+//  NAMAZ QAYDASI ƏMRLƏRİ
+// ═══════════════════════════════════════════════════════════════
+
+function getNamazInfoKeyboard(lang = 'az') {
+    const prayers = PRAYER_INFO[lang] || PRAYER_INFO.az;
+    const keyboard = [];
+
+    // Hər namaz üçün detallı düymə (hər sətirdə 2)
+    for (let i = 0; i < prayers.length; i += 2) {
+        const row = [];
+        row.push({ text: `${prayers[i].name.split(' ')[0]} ${t('namaz_info_detail_btn', lang).split(' ').slice(1).join(' ') || prayers[i].name.split(' ').slice(1).join(' ')}`, callback_data: `namaz_detail_${prayers[i].id}` });
+        if (i + 1 < prayers.length) {
+            row.push({ text: `${prayers[i+1].name.split(' ')[0]} ${t('namaz_info_detail_btn', lang).split(' ').slice(1).join(' ') || prayers[i+1].name.split(' ').slice(1).join(' ')}`, callback_data: `namaz_detail_${prayers[i+1].id}` });
+        }
+        keyboard.push(row);
+    }
+
+    // Namazda oxunan dualar düyməsi
+    keyboard.push([
+        { text: t('namaz_info_words_btn', lang), callback_data: 'cmd_namaz_words' },
+    ]);
+
+    // Geri düyməsi
+    keyboard.push([
+        { text: t('btn_back', lang), callback_data: 'cmd_menu' },
+    ]);
+
+    return { inline_keyboard: keyboard };
+}
+
+async function cmdNamazInfo(botToken, chatId, env) {
+    const settings = env ? await getSettings(chatId, env) : {};
+    const lang = settings.language || 'az';
+    const prayers = PRAYER_INFO[lang] || PRAYER_INFO.az;
+    const rkUnit = lang === 'tr' ? 'rekât' : 'rükət';
+
+    let msg = `<b>${t('namaz_info_title', lang)}</b>\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+    msg += `<b>${t('namaz_info_table_title', lang)}:</b>\n\n`;
+
+    for (const p of prayers) {
+        const parts = [];
+        if (p.sunnet_before > 0) parts.push(`${p.sunnet_before} ${t('namaz_info_sunnet', lang)}`);
+        parts.push(`${p.farz} ${t('namaz_info_farz', lang)}`);
+        if (p.sunnet_after > 0) parts.push(`${p.sunnet_after} ${t('namaz_info_sunnet', lang)}`);
+        if (p.vitr > 0) parts.push(`${p.vitr} ${t('namaz_info_vitr', lang)}`);
+
+        msg += `${p.name}\n`;
+        msg += `   ${parts.join(' + ')} = <b>${p.total} ${rkUnit}</b>\n\n`;
+    }
+
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n`;
+    msg += `${t('namaz_info_footer', lang)}`;
+
+    await telegramSendMessage(botToken, chatId, msg, getNamazInfoKeyboard(lang));
+}
+
+async function cmdNamazDetail(botToken, chatId, prayerId, env) {
+    const settings = env ? await getSettings(chatId, env) : {};
+    const lang = settings.language || 'az';
+    const prayers = PRAYER_INFO[lang] || PRAYER_INFO.az;
+    const prayer = prayers.find(p => p.id === prayerId);
+
+    if (!prayer) {
+        await cmdNamazInfo(botToken, chatId, env);
+        return;
+    }
+
+    let msg = `<b>${t('namaz_detail_title', lang).replace('{prayer}', prayer.name)}</b>\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+    msg += `📊 <b>${prayer.summary}</b>\n\n`;
+
+    for (const step of prayer.steps) {
+        msg += `${step}\n`;
+    }
+
+    const kb = {
+        inline_keyboard: [
+            [
+                { text: t('namaz_info_words_btn', lang), callback_data: 'cmd_namaz_words' },
+            ],
+            [
+                { text: `🔙 ${t('namaz_info_title', lang)}`, callback_data: 'cmd_namaz_info' },
+            ],
+            [
+                { text: t('btn_back', lang), callback_data: 'cmd_menu' },
+            ],
+        ],
+    };
+
+    await telegramSendMessage(botToken, chatId, msg, kb);
+}
+
+async function cmdNamazWords(botToken, chatId, env, page = 1) {
+    const settings = env ? await getSettings(chatId, env) : {};
+    const lang = settings.language || 'az';
+    const words = PRAYER_WORDS[lang] || PRAYER_WORDS.az;
+
+    // Telegramın mesaj limiti ~4096 simvoldur, ona görə 4 dua bir səhifədə göstəririk
+    const perPage = 4;
+    const totalPages = Math.ceil(words.length / perPage);
+    const safePage = Math.max(1, Math.min(page, totalPages));
+    const start = (safePage - 1) * perPage;
+    const end = Math.min(start + perPage, words.length);
+    const pageWords = words.slice(start, end);
+
+    let msg = `<b>${t('namaz_words_title', lang)}</b>`;
+    if (totalPages > 1) {
+        msg += ` (${safePage}/${totalPages})`;
+    }
+    msg += `\n━━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+    for (const w of pageWords) {
+        msg += `<b>${w.title}</b>\n`;
+        msg += `${w.text}\n\n`;
+    }
+
+    const keyboard = [];
+
+    // Naviqasiya düymələri
+    if (totalPages > 1) {
+        const navRow = [];
+        if (safePage > 1) navRow.push({ text: lang === 'tr' ? '◀️ Önceki' : '◀️ Əvvəlki', callback_data: `namaz_words_${safePage - 1}` });
+        navRow.push({ text: `📄 ${safePage}/${totalPages}`, callback_data: 'noop' });
+        if (safePage < totalPages) navRow.push({ text: lang === 'tr' ? 'Sonraki ▶️' : 'Növbəti ▶️', callback_data: `namaz_words_${safePage + 1}` });
+        keyboard.push(navRow);
+    }
+
+    keyboard.push([
+        { text: `🔙 ${t('namaz_info_title', lang)}`, callback_data: 'cmd_namaz_info' },
+    ]);
+    keyboard.push([
+        { text: t('btn_back', lang), callback_data: 'cmd_menu' },
+    ]);
+
+    await telegramSendMessage(botToken, chatId, msg, { inline_keyboard: keyboard });
+}
+
+
 async function cmdHelp(botToken, chatId, env) {
     const settings = env ? await getSettings(chatId, env) : {};
     const lang = settings.language || 'az';
@@ -2043,6 +2453,10 @@ async function cmdHelp(botToken, chatId, env) {
         msg += `  /istatistik — Oruç istatistikleri\n`;
         msg += `  /dua — İftar/İmsak duaları\n\n`;
         msg += `📿 <b>İbadet:</b>\n`;
+        msg += `  /namazinfo — Namaz kılavuzu\n`;
+        msg += `  /namazlarim — Günlük namaz izleme ve istatistik\n`;
+        msg += `  /kuran — Kur'an-ı Kerim Menüsü (/ayet, /sureler)\n`;
+        msg += `  /dualar — Günlük Dualar (Müslümanın Kalesi)\n`;
         msg += `  /tespih — Dijital Tesbih\n`;
         msg += `  /hadis — Günün hadisi\n`;
         msg += `  /kaza — Kaza namazı\n`;
@@ -2054,7 +2468,7 @@ async function cmdHelp(botToken, chatId, env) {
         msg += `  /cuma — Cuma tebriği\n\n`;
         msg += `⚙️ /ayarlar — Ayarlar\n`;
         msg += `❓ /yardim — Bu yardım mesajı\n\n`;
-        msg += `🔔 <b>Otomatik Bildirimler:</b>\n`;
+        msg += `🔔 <b>Komut Dışı Bildirimler:</b>\n`;
         msg += `  • Her namaza 15, 10, 5 dk kala\n`;
         msg += `  • Vakit geldiğinde\n`;
         msg += `  • Her gün sabah 05:00'de takvim\n\n`;
@@ -2071,6 +2485,10 @@ async function cmdHelp(botToken, chatId, env) {
         msg += `  /statistika — Oruc statistikası\n`;
         msg += `  /dua — İftar/İmsak duaları\n\n`;
         msg += `📿 <b>İbadət:</b>\n`;
+        msg += `  /namazinfo — Namaz qaydası\n`;
+        msg += `  /namazlarim — Gündəlik namaz izləmə və statistika\n`;
+        msg += `  /quran — Qurani-Kərim Menyusu (/ayə, /sureler)\n`;
+        msg += `  /dualar — Gündəlik Dualar (Müsəlmanın Qalası)\n`;
         msg += `  /zikr — Rəqəmsal Təsbeh\n`;
         msg += `  /hedis — Günün hədisi\n`;
         msg += `  /qeza — Qəza namazı\n`;
@@ -2696,6 +3114,739 @@ async function savePrayerLog(chatId, dateStr, logData, env) {
     await env.NOTIFICATIONS_KV.put(key, JSON.stringify(logData), { expirationTtl: 604800 });
 }
 
+// ─── Namaz Statistika Helper Funksiyaları ───────────────────────
+
+async function getPrayerStats(chatId, env) {
+    const key = `prayer_stats:${chatId}`;
+    const data = await env.NOTIFICATIONS_KV.get(key, 'json');
+    if (!data) {
+        return {
+            currentStreak: 0,
+            maxStreak: 0,
+            lastStreakDate: null,
+            totalPrayers: 0,
+            history: {},
+        };
+    }
+    return data;
+}
+
+async function savePrayerStats(chatId, stats, env) {
+    const key = `prayer_stats:${chatId}`;
+    await env.NOTIFICATIONS_KV.put(key, JSON.stringify(stats));
+}
+
+/**
+ * Namaz toggle edildikdə və ya auto-qaza zamanı stats-ı yeniləyir.
+ */
+async function updatePrayerStats(chatId, dateStr, prayerLog, env) {
+    const stats = await getPrayerStats(chatId, env);
+
+    // Bu gün üçün qılınan namaz sayını hesabla
+    let doneToday = 0;
+    for (const p of TRACKED_PRAYERS) {
+        if (prayerLog[p] === true) doneToday++;
+    }
+
+    // History-ni yenilə (son 30 günü saxla)
+    stats.history[dateStr] = doneToday;
+
+    // Köhnə qeydləri təmizlə (30 gündən əvvəlkiləri sil)
+    const historyDates = Object.keys(stats.history).sort();
+    if (historyDates.length > 30) {
+        const toRemove = historyDates.slice(0, historyDates.length - 30);
+        for (const d of toRemove) {
+            delete stats.history[d];
+        }
+    }
+
+    // Ümumi namaz sayını hesabla (bütün history-dən)
+    let totalPrayers = 0;
+    for (const d of Object.keys(stats.history)) {
+        totalPrayers += stats.history[d];
+    }
+    stats.totalPrayers = totalPrayers;
+
+    // Streak hesabla — bu gündən geriyə doğru yoxla
+    let currentStreak = 0;
+    let checkDate = dateStr;
+
+    for (let i = 0; i < 60; i++) {
+        if (stats.history[checkDate] === 5) {
+            currentStreak++;
+        } else if (stats.history[checkDate] !== undefined) {
+            break;
+        } else {
+            break;
+        }
+        // Əvvəlki günə keç
+        const d = new Date(checkDate + 'T12:00:00Z');
+        d.setUTCDate(d.getUTCDate() - 1);
+        checkDate = d.toISOString().split('T')[0];
+    }
+
+    stats.currentStreak = currentStreak;
+    stats.lastStreakDate = dateStr;
+    if (currentStreak > stats.maxStreak) {
+        stats.maxStreak = currentStreak;
+    }
+
+    await savePrayerStats(chatId, stats, env);
+}
+
+// ─── Namaz Statistika Ekranı ────────────────────────────────────
+
+async function cmdNamazStats(botToken, chatId, env) {
+    const settings = await getSettings(chatId, env);
+    const lang = settings.language || 'az';
+    const stats = await getPrayerStats(chatId, env);
+
+    // Data yoxdursa
+    if (Object.keys(stats.history).length === 0) {
+        let msg = `${t('namaz_stats_title', lang)}\n`;
+        msg += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+        msg += t('namaz_stats_no_data', lang);
+        const kb = {
+            inline_keyboard: [
+                [{ text: t('btn_namazlarim', lang), callback_data: 'cmd_namazlarim' }],
+                [{ text: t('btn_back', lang), callback_data: 'cmd_menu' }],
+            ],
+        };
+        await telegramSendMessage(botToken, chatId, msg, kb);
+        return;
+    }
+
+    // Son 7 gün və 30 gün statistikası
+    const today = new Date();
+    let week7done = 0, week7total = 0;
+    let month30done = 0, month30total = 0;
+
+    for (let i = 0; i < 30; i++) {
+        const d = new Date(today);
+        d.setDate(d.getDate() - i);
+        const ds = d.toISOString().split('T')[0];
+        const count = stats.history[ds] !== undefined ? stats.history[ds] : 0;
+        month30done += count;
+        month30total += 5;
+        if (i < 7) {
+            week7done += count;
+            week7total += 5;
+        }
+    }
+
+    const weekPct = week7total > 0 ? Math.round((week7done / week7total) * 100) : 0;
+    const monthPct = month30total > 0 ? Math.round((month30done / month30total) * 100) : 0;
+
+    let msg = `${t('namaz_stats_title', lang)}\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+    // Son 7 gün
+    msg += `${t('namaz_stats_week', lang)}:\n`;
+    msg += `<code>${makeProgressBar(week7done, week7total, 15)} ${weekPct}%</code>\n`;
+    msg += `<code>${week7done}/${week7total} ${t('namaz_stats_prayers', lang)}</code>\n\n`;
+
+    // Son 30 gün
+    msg += `${t('namaz_stats_month', lang)}:\n`;
+    msg += `<code>${makeProgressBar(month30done, month30total, 15)} ${monthPct}%</code>\n`;
+    msg += `<code>${month30done}/${month30total} ${t('namaz_stats_prayers', lang)}</code>\n\n`;
+
+    // Streak
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n`;
+    msg += `${t('namaz_stats_streak', lang)}: <b>${stats.currentStreak} ${t('namaz_stats_days', lang)}</b> 🔥\n`;
+    msg += `${t('namaz_stats_max_streak', lang)}: <b>${stats.maxStreak} ${t('namaz_stats_days', lang)}</b>\n`;
+    msg += `${t('namaz_stats_total', lang)}: <b>${stats.totalPrayers} ${t('namaz_stats_prayers', lang)}</b>\n\n`;
+
+    // Son 7 günün vizual xəritəsi
+    const dayIcons = [];
+    for (let i = 6; i >= 0; i--) {
+        const d = new Date(today);
+        d.setDate(d.getDate() - i);
+        const ds = d.toISOString().split('T')[0];
+        const count = stats.history[ds];
+        if (count === 5) dayIcons.push('🟢');
+        else if (count >= 3) dayIcons.push('🟡');
+        else if (count >= 1) dayIcons.push('🟠');
+        else dayIcons.push('⚪');
+    }
+    msg += `📅 ${dayIcons.join(' ')}\n`;
+    msg += `<i>🟢=5/5  🟡=3-4  🟠=1-2  ⚪=0</i>\n\n`;
+
+    // Nailiyyətlər
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n`;
+    msg += `${t('namaz_stats_achievements', lang)}\n\n`;
+    for (const ach of NAMAZ_ACHIEVEMENTS) {
+        const earned = ach.check(stats);
+        const status = earned ? t('namaz_stats_earned', lang) : t('namaz_stats_locked', lang);
+        const achName = lang === 'tr' ? ach.name_tr : ach.name_az;
+        const achDesc = lang === 'tr' ? ach.desc_tr : ach.desc_az;
+        msg += `${ach.emoji} <b>${achName}</b> ${status}\n`;
+        msg += `    <i>${achDesc}</i>\n`;
+    }
+
+    const kb = {
+        inline_keyboard: [
+            [{ text: t('btn_namazlarim', lang), callback_data: 'cmd_namazlarim' }],
+            [{ text: t('btn_back', lang), callback_data: 'cmd_menu' }],
+        ],
+    };
+
+    await telegramSendMessage(botToken, chatId, msg, kb);
+}
+
+// ─── Quran İnteqrasiyası Funksiyaları ────────────────────────────
+
+async function cmdQuranMenu(botToken, chatId, env) {
+    const settings = await getSettings(chatId, env);
+    const lang = settings.language || 'az';
+
+    let msg = `📖 <b>${lang === 'tr' ? 'Kur\'an-ı Kerim Menüsü' : 'Qurani-Kərim Menyusu'}</b>\n\n`;
+    if (lang === 'tr') {
+        msg += `Günün ayetini okuyabilir, namazda en çok okunan kısa sureleri, popüler sureleri mealleriyle birlikte inceleyebilir veya tüm sureleri Mushaf/Nüzul sırasına göre okuyabilirsiniz.\n\n`;
+        msg += `🔍 <i>Bir ayete doğrudan gitmek için sohbete <code>sure:ayet</code> (örn: 2:255) yazabilirsiniz.</i>`;
+    } else {
+        msg += `Günün ayəsini oxuya bilər, namazda ən çox oxunan qısa surələri, populyar surələri mənaları ilə birlikdə öyrənə bilər və ya bütün surələri Müşəf/Nüzul sırasına görə oxuya bilərsiniz.\n\n`;
+        msg += `🔍 <i>Bir ayəyə birbaşa keçmək üçün çata <code>surə:ayə</code> (məs: 2:255) yaza bilərsiniz.</i>`;
+    }
+
+    const kb = {
+        inline_keyboard: [
+            [
+                { text: lang === 'tr' ? '📖 Günün Ayeti' : '📖 Günün Ayəsi', callback_data: 'cmd_gunun_ayesi' },
+                { text: lang === 'tr' ? '📖 Kısa Sureler' : '📖 Qısa Surələr', callback_data: 'cmd_qisa_sureler_1' }
+            ],
+            [
+                { text: lang === 'tr' ? '🌟 Çok Okunanlar' : '🌟 Çox Oxunanlar', callback_data: 'cmd_quran_popular' },
+                { text: lang === 'tr' ? '📋 Mushaf Sırası' : '📋 Müşəf Sırası', callback_data: 'qlist_1_mushaf' }
+            ],
+            [
+                { text: lang === 'tr' ? '📜 Nüzul Sırası' : '📜 Nüzul Sırası', callback_data: 'qlist_1_nuzul' },
+                { text: t('btn_back', lang), callback_data: 'cmd_menu' }
+            ]
+        ]
+    };
+
+    await telegramSendMessage(botToken, chatId, msg, kb);
+}
+
+async function fetchQuranSurah(surahNum) {
+    const url = `https://api.alquran.cloud/v1/surah/${surahNum}/editions/quran-simple,az.mammadaliyev,tr.diyanet`;
+    const cache = typeof caches !== 'undefined' ? caches.default : null;
+    let cachedResponse = cache ? await cache.match(url) : null;
+    
+    if (cachedResponse) {
+        return await cachedResponse.json();
+    }
+    
+    const res = await fetch(url);
+    if (!res.ok) {
+        throw new Error(`Failed to fetch surah ${surahNum}: ${res.statusText}`);
+    }
+    
+    const data = await res.json();
+    if (cache && data && data.code === 200) {
+        const cacheRes = new Response(JSON.stringify(data), {
+            headers: {
+                'Content-Type': 'application/json',
+                'Cache-Control': 'public, max-age=86400'
+            }
+        });
+        await cache.put(url, cacheRes);
+    }
+    return data;
+}
+
+async function fetchQuranAyah(surahNum, ayahNum) {
+    const url = `https://api.alquran.cloud/v1/ayah/${surahNum}:${ayahNum}/editions/quran-simple,az.mammadaliyev,tr.diyanet`;
+    const cache = typeof caches !== 'undefined' ? caches.default : null;
+    let cachedResponse = cache ? await cache.match(url) : null;
+    
+    if (cachedResponse) {
+        return await cachedResponse.json();
+    }
+    
+    const res = await fetch(url);
+    if (!res.ok) {
+        throw new Error(`Failed to fetch ayah ${surahNum}:${ayahNum}: ${res.statusText}`);
+    }
+    
+    const data = await res.json();
+    if (cache && data && data.code === 200) {
+        const cacheRes = new Response(JSON.stringify(data), {
+            headers: {
+                'Content-Type': 'application/json',
+                'Cache-Control': 'public, max-age=86400'
+            }
+        });
+        await cache.put(url, cacheRes);
+    }
+    return data;
+}
+
+async function cmdPopularSurahs(botToken, chatId, env) {
+    const settings = await getSettings(chatId, env);
+    const lang = settings.language || 'az';
+    
+    let msg = `🌟 <b>${lang === 'tr' ? 'Çok Okunan Sureler' : 'Çox Oxunan Surələr'}</b>\n\n`;
+    if (lang === 'tr') {
+        msg += `Müslümanlar arasında en çok okunan ve faziletli kabul edilen surelere hızlıca erişin:`;
+    } else {
+        msg += `Müsəlmanlar arasında ən çox oxunan və fəzilətli qəbul edilən surələrə sürətli keçid edin:`;
+    }
+    
+    const popularList = POPULAR_SURAHS.map(num => ALL_SURAHS.find(s => s.num === num)).filter(Boolean);
+    
+    const keyboard = [];
+    for (let i = 0; i < popularList.length; i += 2) {
+        const row = [];
+        const s1 = popularList[i];
+        const s2 = popularList[i + 1];
+        
+        if (s1) {
+            const name1 = lang === 'tr' ? s1.name_tr : s1.name_az;
+            row.push({ text: `📖 ${s1.num}. ${name1}`, callback_data: `qread_${s1.num}_1_popular` });
+        }
+        if (s2) {
+            const name2 = lang === 'tr' ? s2.name_tr : s2.name_az;
+            row.push({ text: `📖 ${s2.num}. ${name2}`, callback_data: `qread_${s2.num}_1_popular` });
+        }
+        keyboard.push(row);
+    }
+    
+    keyboard.push([
+        { text: lang === 'tr' ? '🔙 Kur\'an Menüsü' : '🔙 Quran Menyusu', callback_data: 'cmd_quran_menu' },
+        { text: t('btn_back', lang), callback_data: 'cmd_menu' }
+    ]);
+    
+    const kb = { inline_keyboard: keyboard };
+    await telegramSendMessage(botToken, chatId, msg, kb);
+}
+
+async function cmdAllQuranList(botToken, chatId, page = 1, sortType = 'mushaf', env) {
+    const settings = await getSettings(chatId, env);
+    const lang = settings.language || 'az';
+    
+    let list = [...ALL_SURAHS];
+    if (sortType === 'nuzul') {
+        list.sort((a, b) => a.revelation_pos - b.revelation_pos);
+    } else {
+        list.sort((a, b) => a.num - b.num);
+    }
+    
+    const itemsPerPage = 12;
+    const totalItems = list.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    const startIdx = (page - 1) * itemsPerPage;
+    const endIdx = Math.min(startIdx + itemsPerPage, totalItems);
+    
+    let msg = `📖 <b>${lang === 'tr' ? 'Kur\'an Sureleri' : 'Quran Surələri'} (${sortType === 'nuzul' ? (lang === 'tr' ? 'Nüzul Sırası' : 'Nüzul sırası') : (lang === 'tr' ? 'Mushaf Sırası' : 'Müşəf sırası')})</b>\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+    if (lang === 'tr') {
+        msg += `Okumak istediğiniz sureyi seçin (Sayfa: ${page}/${totalPages}):\n`;
+        msg += `<i>İpucu: Bir ayete doğrudan gitmek için sohbete <code>sure:ayet</code> (örneğin 2:255) yazabilirsiniz.</i>\n\n`;
+    } else {
+        msg += `Oxumaq istədiyiniz surəni seçin (Səhifə: ${page}/${totalPages}):\n`;
+        msg += `<i>İpucu: Bir ayəyə birbaşa keçmək üçün çata <code>surə:ayə</code> (məsələn 2:255) yaza bilərsiniz.</i>\n\n`;
+    }
+    
+    const keyboard = [];
+    for (let i = startIdx; i < endIdx; i += 2) {
+        const row = [];
+        const s1 = list[i];
+        const s2 = list[i + 1];
+        
+        if (s1) {
+            const name1 = lang === 'tr' ? s1.name_tr : s1.name_az;
+            const label1 = sortType === 'nuzul' 
+                ? `${s1.revelation_pos}. ${name1} (№${s1.num})`
+                : `${s1.num}. ${name1}`;
+            row.push({ text: label1, callback_data: `qread_${s1.num}_1_${sortType}` });
+        }
+        if (s2) {
+            const name2 = lang === 'tr' ? s2.name_tr : s2.name_az;
+            const label2 = sortType === 'nuzul' 
+                ? `${s2.revelation_pos}. ${name2} (№${s2.num})`
+                : `${s2.num}. ${name2}`;
+            row.push({ text: label2, callback_data: `qread_${s2.num}_1_${sortType}` });
+        }
+        keyboard.push(row);
+    }
+    
+    const navRow = [];
+    if (page > 1) {
+        navRow.push({ text: '◀️', callback_data: `qlist_${page - 1}_${sortType}` });
+    }
+    navRow.push({ text: `📄 ${page}/${totalPages}`, callback_data: 'noop' });
+    if (page < totalPages) {
+        navRow.push({ text: '▶️', callback_data: `qlist_${page + 1}_${sortType}` });
+    }
+    keyboard.push(navRow);
+    
+    const otherSort = sortType === 'mushaf' ? 'nuzul' : 'mushaf';
+    const toggleLabel = sortType === 'mushaf'
+        ? (lang === 'tr' ? '🔄 Nüzul Sırasına Göre Listele' : '🔄 Nüzul Sırasına Görə Siyahıla')
+        : (lang === 'tr' ? '🔄 Mushaf Sırasına Göre Listele' : '🔄 Müşəf Sırasına Görə Siyahıla');
+    
+    keyboard.push([{ text: toggleLabel, callback_data: `qlist_1_${otherSort}` }]);
+    
+    keyboard.push([
+        { text: lang === 'tr' ? '🔙 Kur\'an Menüsü' : '🔙 Quran Menyusu', callback_data: 'cmd_quran_menu' },
+        { text: t('btn_back', lang), callback_data: 'cmd_menu' }
+    ]);
+    
+    const kb = { inline_keyboard: keyboard };
+    await telegramSendMessage(botToken, chatId, msg, kb);
+}
+
+async function cmdReadSurah(botToken, chatId, surahNum, page = 1, sortType = 'mushaf', env) {
+    const settings = await getSettings(chatId, env);
+    const lang = settings.language || 'az';
+    
+    const surahMeta = ALL_SURAHS.find(s => s.num === parseInt(surahNum));
+    if (!surahMeta) return;
+    
+    const nameStr = lang === 'tr' ? surahMeta.name_tr : surahMeta.name_az;
+    
+    try {
+        const quranData = await fetchQuranSurah(surahNum);
+        if (!quranData || quranData.code !== 200 || !quranData.data) {
+            throw new Error("Invalid API response");
+        }
+        
+        const arSurah = quranData.data[0];
+        const azSurah = quranData.data[1];
+        const trSurah = quranData.data[2];
+        
+        const totalAyahs = arSurah.ayahs.length;
+        const itemsPerPage = 5;
+        const totalPages = Math.ceil(totalAyahs / itemsPerPage);
+        const startIdx = (page - 1) * itemsPerPage;
+        const endIdx = Math.min(startIdx + itemsPerPage, totalAyahs);
+        
+        let msg = `📖 <b>${surahNum}. ${nameStr} (${surahMeta.name_ar})</b>\n`;
+        msg += `📌 <i>${lang === 'tr' ? `Ayetler: ${startIdx + 1}-${endIdx} / ${totalAyahs}` : `Ayələr: ${startIdx + 1}-${endIdx} / ${totalAyahs}`}</i>\n`;
+        msg += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+        
+        for (let i = startIdx; i < endIdx; i++) {
+            const arAyah = arSurah.ayahs[i];
+            const azAyah = azSurah.ayahs[i];
+            const trAyah = trSurah.ayahs[i];
+            
+            msg += `🟢 <b>[${surahNum}:${arAyah.numberInSurah}]</b> <code>${arAyah.text}</code>\n\n`;
+            if (lang === 'tr') {
+                msg += `📝 ${trAyah.text}\n`;
+            } else {
+                msg += `📝 ${azAyah.text}\n`;
+            }
+            msg += `─────────────────────\n\n`;
+        }
+        
+        msg = msg.trim().slice(0, -21); // Remove trailing line
+        
+        const keyboard = [];
+        const navRow = [];
+        if (page > 1) {
+            navRow.push({ text: '◀️', callback_data: `qread_${surahNum}_${page - 1}_${sortType}` });
+        }
+        navRow.push({ text: `📄 ${page}/${totalPages}`, callback_data: 'noop' });
+        if (page < totalPages) {
+            navRow.push({ text: '▶️', callback_data: `qread_${surahNum}_${page + 1}_${sortType}` });
+        }
+        keyboard.push(navRow);
+        
+        const backText = sortType === 'popular'
+            ? (lang === 'tr' ? '📋 Popüler Sureler' : '📋 Populyar Surələr')
+            : (lang === 'tr' ? '📋 Sure Listesi' : '📋 Surə siyahısı');
+        
+        const backCallback = sortType === 'popular'
+            ? 'cmd_quran_popular'
+            : `qlist_1_${sortType}`;
+            
+        keyboard.push([{ text: backText, callback_data: backCallback }]);
+        keyboard.push([
+            { text: lang === 'tr' ? '🔙 Kur\'an Menüsü' : '🔙 Quran Menyusu', callback_data: 'cmd_quran_menu' },
+            { text: t('btn_back', lang), callback_data: 'cmd_menu' }
+        ]);
+        
+        const kb = { inline_keyboard: keyboard };
+        await telegramSendMessage(botToken, chatId, msg, kb);
+        
+    } catch (err) {
+        console.error(err);
+        const errMsg = lang === 'tr'
+            ? `⚠️ Sure verileri yüklenirken bir hata oluştu. Lütfen tekrar deneyin.`
+            : `⚠️ Surə məlumatları yüklənərkən xəta baş verdi. Lütfən yenidən cəhd edin.`;
+        await telegramSendMessage(botToken, chatId, errMsg, getBackKeyboard(lang));
+    }
+}
+
+async function cmdSearchAyah(botToken, chatId, surahNum, ayahNum, env) {
+    const settings = await getSettings(chatId, env);
+    const lang = settings.language || 'az';
+    
+    const surahMeta = ALL_SURAHS.find(s => s.num === parseInt(surahNum));
+    if (!surahMeta) {
+        const invalidSurah = lang === 'tr'
+            ? `⚠️ Geçersiz sure numarası. Sure numarası 1 ile 114 arasında olmalıdır.`
+            : `⚠️ Yanlış surə nömrəsi. Surə nömrəsi 1 ilə 114 arasında olmalıdır.`;
+        await telegramSendMessage(botToken, chatId, invalidSurah);
+        return;
+    }
+    
+    if (parseInt(ayahNum) < 1 || parseInt(ayahNum) > surahMeta.ayah_count) {
+        const invalidAyah = lang === 'tr'
+            ? `⚠️ Geçersiz ayet numarası. ${surahMeta.name_tr} suresi ${surahMeta.ayah_count} ayettir.`
+            : `⚠️ Yanlış ayə nömrəsi. ${surahMeta.name_az} surəsi ${surahMeta.ayah_count} ayədən ibarətdir.`;
+        await telegramSendMessage(botToken, chatId, invalidAyah);
+        return;
+    }
+    
+    try {
+        const data = await fetchQuranAyah(surahNum, ayahNum);
+        if (!data || data.code !== 200 || !data.data) {
+            throw new Error("Invalid API response");
+        }
+        
+        const arAyah = data.data[0];
+        const azAyah = data.data[1];
+        const trAyah = data.data[2];
+        const surahName = lang === 'tr' ? surahMeta.name_tr : surahMeta.name_az;
+        
+        let msg = `🔍 <b>${lang === 'tr' ? 'Ayet Arama Sonucu' : 'Ayə Axtarış Nəticəsi'}</b>\n`;
+        msg += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+        msg += `📖 <b>${surahMeta.num}. ${surahName} (${surahMeta.name_ar}), ${ayahNum}-${lang === 'tr' ? 'ayet' : 'ayə'}</b>\n\n`;
+        msg += `🟢 <code>${arAyah.text}</code>\n\n`;
+        msg += `📝 <b>${lang === 'tr' ? 'Anlamı' : 'Tərcüməsi'}:</b>\n`;
+        msg += `${lang === 'tr' ? trAyah.text : azAyah.text}\n\n`;
+        msg += `━━━━━━━━━━━━━━━━━━━━━`;
+        
+        const kb = {
+            inline_keyboard: [
+                [{ text: lang === 'tr' ? '📖 Surenin Tamamını Oku' : '📖 Surənin Tamamını Oxu', callback_data: `qread_${surahNum}_1_mushaf` }],
+                [
+                    { text: lang === 'tr' ? '🔙 Kur\'an Menüsü' : '🔙 Quran Menyusu', callback_data: 'cmd_quran_menu' },
+                    { text: t('btn_back', lang), callback_data: 'cmd_menu' }
+                ]
+            ]
+        };
+        
+        await telegramSendMessage(botToken, chatId, msg, kb);
+    } catch (err) {
+        console.error(err);
+        const errMsg = lang === 'tr'
+            ? `⚠️ Ayet yüklenirken bir hata oluştu. Lütfen referansın doğruluğunu kontrol edin (Örn: 2:255).`
+            : `⚠️ Ayə yüklənərkən xəta baş verdi. Lütfən axtardığınız nömrəni düzgün yazın (Məs: 2:255).`;
+        await telegramSendMessage(botToken, chatId, errMsg);
+    }
+}
+
+async function cmdGununAyesi(botToken, chatId, env, random = false) {
+    const settings = await getSettings(chatId, env);
+    const lang = settings.language || 'az';
+    const baku = getBakuNow();
+    
+    let index;
+    if (random) {
+        index = Math.floor(Math.random() * GUNUN_AYELERI.length);
+    } else {
+        const dayOfYear = Math.floor((new Date(baku.year, baku.month - 1, baku.day) - new Date(baku.year, 0, 0)) / (24 * 60 * 60 * 1000));
+        index = dayOfYear % GUNUN_AYELERI.length;
+    }
+
+    const verse = GUNUN_AYELERI[index];
+
+    let msg = `📖 <b>${lang === 'tr' ? 'Günün Ayeti' : 'Günün Ayəsi'}</b>\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+    msg += `<b>${verse.ar}</b>\n\n`;
+    msg += `📍 <i>${verse.source}</i>\n\n`;
+    msg += `📝 <b>${lang === 'tr' ? 'Anlamı' : 'Tərcüməsi'}:</b>\n`;
+    msg += `${lang === 'tr' ? verse.mean_tr : verse.mean_az}\n\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n`;
+    msg += `💡 <i>${lang === 'tr' ? 'Her gün yeni bir ayet için bu menüyü ziyaret edin.' : 'Hər gün yeni bir ayə üçün bu menyunu ziyarət edin.'}</i>`;
+
+    const kb = {
+        inline_keyboard: [
+            [{ text: lang === 'tr' ? '🔄 Başka Ayet' : '🔄 Başqa Ayə', callback_data: 'cmd_gunun_ayesi_random' }],
+            [
+                { text: lang === 'tr' ? '🔙 Kur\'an Menüsü' : '🔙 Quran Menyusu', callback_data: 'cmd_quran_menu' },
+                { text: t('btn_back', lang), callback_data: 'cmd_menu' }
+            ]
+        ]
+    };
+
+    await telegramSendMessage(botToken, chatId, msg, kb);
+}
+
+async function cmdQisaSureler(botToken, chatId, env, page = 1) {
+    const settings = await getSettings(chatId, env);
+    const lang = settings.language || 'az';
+
+    const itemsPerPage = 4;
+    const totalItems = QISA_SURELER.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    const startIdx = (page - 1) * itemsPerPage;
+    const endIdx = Math.min(startIdx + itemsPerPage, totalItems);
+
+    let msg = `📖 <b>${lang === 'tr' ? 'Kısa Sureler' : 'Qısa Surələr'}</b>\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+    if (lang === 'tr') {
+        msg += `Öğrenmek istediğiniz surenin detayları (Arapça, okunuş ve meal) için aşağıdaki butonlara basın:\n\n`;
+    } else {
+        msg += `Öyrənmək istədiyiniz surənin detalları (Ərəbcə, oxunuş və məna) üçün aşağıdakı düymələrə basın:\n\n`;
+    }
+
+    const keyboard = [];
+    for (let i = startIdx; i < endIdx; i++) {
+        const surah = QISA_SURELER[i];
+        const surahName = lang === 'tr' ? surah.name_tr : surah.name_az;
+        keyboard.push([{
+            text: `📖 ${surah.num}. ${surahName} (${surah.ayah_count} ${lang === 'tr' ? 'ayet' : 'ayə'})`,
+            callback_data: `sure_detail_${surah.id}`
+        }]);
+    }
+
+    const navRow = [];
+    if (page > 1) {
+        navRow.push({ text: lang === 'tr' ? '◀️ Önceki' : '◀️ Əvvəlki', callback_data: `cmd_qisa_sureler_${page - 1}` });
+    }
+    if (page < totalPages) {
+        navRow.push({ text: lang === 'tr' ? 'Sonraki ▶️' : 'Növbəti ▶️', callback_data: `cmd_qisa_sureler_${page + 1}` });
+    }
+    if (navRow.length > 0) {
+        keyboard.push(navRow);
+    }
+
+    keyboard.push([
+        { text: lang === 'tr' ? '🔙 Kur\'an Menüsü' : '🔙 Quran Menyusu', callback_data: 'cmd_quran_menu' },
+        { text: t('btn_back', lang), callback_data: 'cmd_menu' }
+    ]);
+
+    const kb = { inline_keyboard: keyboard };
+    await telegramSendMessage(botToken, chatId, msg, kb);
+}
+
+async function cmdSureDetail(botToken, chatId, sureId, env) {
+    const settings = await getSettings(chatId, env);
+    const lang = settings.language || 'az';
+
+    const index = QISA_SURELER.findIndex(s => s.id === sureId);
+    if (index === -1) return;
+
+    const surah = QISA_SURELER[index];
+    const surahName = lang === 'tr' ? surah.name_tr : surah.name_az;
+
+    let msg = `📖 <b>${surahName} (${surah.ayah_count} ${lang === 'tr' ? 'ayet' : 'ayə'})</b>\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+    msg += `🟢 <b>${lang === 'tr' ? 'Arapça' : 'Ərəbcə'}:</b>\n`;
+    msg += `<code>${surah.ar}</code>\n\n`;
+    msg += `🔵 <b>${lang === 'tr' ? 'Okunuşu' : 'Oxunuşu'}:</b>\n`;
+    msg += `<i>${lang === 'tr' ? surah.read_tr : surah.read_az}</i>\n\n`;
+    msg += `🟡 <b>${lang === 'tr' ? 'Meali' : 'Mənası'}:</b>\n`;
+    msg += `${lang === 'tr' ? surah.mean_tr : surah.mean_az}\n\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━`;
+
+    const navRow = [];
+    if (index > 0) {
+        const prevSurah = QISA_SURELER[index - 1];
+        navRow.push({ text: lang === 'tr' ? '◀️ Önceki Sure' : '◀️ Əvvəlki surə', callback_data: `sure_detail_${prevSurah.id}` });
+    }
+    if (index < QISA_SURELER.length - 1) {
+        const nextSurah = QISA_SURELER[index + 1];
+        navRow.push({ text: lang === 'tr' ? 'Sonraki Sure ▶️' : 'Növbəti surə ▶️', callback_data: `sure_detail_${nextSurah.id}` });
+    }
+
+    const keyboard = [];
+    if (navRow.length > 0) {
+        keyboard.push(navRow);
+    }
+    keyboard.push([{ text: lang === 'tr' ? '📋 Sureler Listesi' : '📋 Surələr siyahısı', callback_data: 'cmd_qisa_sureler_1' }]);
+    keyboard.push([
+        { text: lang === 'tr' ? '🔙 Kur\'an Menüsü' : '🔙 Quran Menyusu', callback_data: 'cmd_quran_menu' },
+        { text: t('btn_back', lang), callback_data: 'cmd_menu' }
+    ]);
+
+    const kb = { inline_keyboard: keyboard };
+    await telegramSendMessage(botToken, chatId, msg, kb);
+}
+
+// ─── Dualar İnteqrasiyası Funksiyaları ───────────────────────────
+
+async function cmdDualarMenu(botToken, chatId, env) {
+    const settings = await getSettings(chatId, env);
+    const lang = settings.language || 'az';
+
+    let msg = `🤲 <b>${lang === 'tr' ? 'Dualar Menüsü (Müslümanın Kalesi)' : 'Dualar Menyusu (Müsəlmanın Qalası)'}</b>\n\n`;
+    if (lang === 'tr') {
+        msg += `Günlük hayatımızda okuyabileceğimiz dua ve zikirleri kategoriler halinde inceleyebilirsiniz:`;
+    } else {
+        msg += `Gündəlik həyatımızda oxuya biləcəyimiz dua və zikr əmrlərini kateqoriyalar üzrə oxuya bilərsiniz:`;
+    }
+
+    const keyboard = [];
+    for (let i = 0; i < GUNDELIK_DUALAR.length; i += 2) {
+        const cat1 = GUNDELIK_DUALAR[i];
+        const cat2 = GUNDELIK_DUALAR[i + 1];
+        const row = [];
+        row.push({
+            text: `${cat1.emoji} ${lang === 'tr' ? cat1.name_tr : cat1.name_az}`,
+            callback_data: `dua_cat_${cat1.id}`
+        });
+        if (cat2) {
+            row.push({
+                text: `${cat2.emoji} ${lang === 'tr' ? cat2.name_tr : cat2.name_az}`,
+                callback_data: `dua_cat_${cat2.id}`
+            });
+        }
+        keyboard.push(row);
+    }
+
+    keyboard.push([{ text: t('btn_back', lang), callback_data: 'cmd_menu' }]);
+
+    const kb = { inline_keyboard: keyboard };
+    await telegramSendMessage(botToken, chatId, msg, kb);
+}
+
+async function cmdDuaCategory(botToken, chatId, categoryId, env) {
+    const settings = await getSettings(chatId, env);
+    const lang = settings.language || 'az';
+
+    const category = GUNDELIK_DUALAR.find(c => c.id === categoryId);
+    if (!category) return;
+
+    const catName = lang === 'tr' ? category.name_tr : category.name_az;
+
+    let msg = `${category.emoji} <b>${catName}</b>\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+    for (let i = 0; i < category.duas.length; i++) {
+        const dua = category.duas[i];
+        const duaTitle = lang === 'tr' ? dua.title_tr : dua.title_az;
+
+        msg += `🔹 <b>${duaTitle}</b>\n\n`;
+        msg += `🟢 <b>${lang === 'tr' ? 'Arapça' : 'Ərəbcə'}:</b>\n`;
+        msg += `<code>${dua.ar}</code>\n\n`;
+        msg += `🔵 <b>${lang === 'tr' ? 'Okunuşu' : 'Oxunuşu'}:</b>\n`;
+        msg += `<i>${lang === 'tr' ? dua.read_tr : dua.read_az}</i>\n\n`;
+        msg += `🟡 <b>${lang === 'tr' ? 'Meali' : 'Mənası'}:</b>\n`;
+        msg += `${lang === 'tr' ? dua.mean_tr : dua.mean_az}\n\n`;
+        msg += `📍 <i>${lang === 'tr' ? 'Kaynak' : 'Mənbə'}: ${dua.source}</i>\n`;
+        
+        if (i < category.duas.length - 1) {
+            msg += `\n━━━━━━━━━━━━━━━━━━━━━\n\n`;
+        }
+    }
+
+    const kb = {
+        inline_keyboard: [
+            [
+                { text: lang === 'tr' ? '🔙 Dualar Menüsü' : '🔙 Dualar Menyusu', callback_data: 'cmd_dualar_menu' },
+                { text: t('btn_back', lang), callback_data: 'cmd_menu' }
+            ]
+        ]
+    };
+
+    await telegramSendMessage(botToken, chatId, msg, kb);
+}
+
 function getNamazlarimKeyboard(prayerLog, dateStr, lang = 'az') {
     const pn = getPrayerNames(lang);
     const keyboard = [];
@@ -2714,6 +3865,7 @@ function getNamazlarimKeyboard(prayerLog, dateStr, lang = 'az') {
 
     keyboard.push(row1);
     keyboard.push(row2);
+    keyboard.push([{ text: t('btn_namaz_stats', lang), callback_data: 'cmd_namaz_stats' }]);
     keyboard.push([{ text: t('btn_back', lang), callback_data: 'cmd_menu' }]);
 
     return { inline_keyboard: keyboard };
@@ -2726,8 +3878,21 @@ async function cmdNamazlarim(botToken, chatId, env) {
     const now = getLocalNow(cityId);
     const dateStr = `${now.year}-${String(now.month).padStart(2, '0')}-${String(now.day).padStart(2, '0')}`;
 
+    // İlk dəfə istifadə: prayerTracking aktiv et
+    if (!settings.prayerTracking) {
+        settings.prayerTracking = true;
+        await saveSettings(chatId, settings, env);
+    }
+
     const dayData = await getDayDataForCity(now.year, now.month, now.day, cityId, env);
-    const prayerLog = await getPrayerLog(chatId, dateStr, env);
+    let prayerLog = await getPrayerLog(chatId, dateStr, env);
+
+    // Əgər bu gün üçün prayer_log KV-da yoxdursa, yarat
+    const logKey = `prayer_log:${chatId}:${dateStr}`;
+    const rawLog = await env.NOTIFICATIONS_KV.get(logKey, 'json');
+    if (!rawLog) {
+        await savePrayerLog(chatId, dateStr, prayerLog, env);
+    }
     const pn = getPrayerNames(lang);
 
     let msg = `${t('namazlarim_title', lang)} — ${now.dateStr}\n`;
@@ -3052,6 +4217,37 @@ async function handleCallbackQuery(callbackQuery, env) {
         await cmdNamazlarim(botToken, chatId, env);
         return;
     }
+    if (data === 'cmd_namaz_stats') {
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, '📊');
+        await cmdNamazStats(botToken, chatId, env);
+        return;
+    }
+    if (data === 'cmd_namaz_info') {
+        const settings = await getSettings(chatId, env);
+        const lang = settings.language || 'az';
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, t('toast_namaz_info', lang));
+        await cmdNamazInfo(botToken, chatId, env);
+        return;
+    }
+    if (data.startsWith('namaz_detail_')) {
+        const prayerId = data.replace('namaz_detail_', '');
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, '📖');
+        await cmdNamazDetail(botToken, chatId, prayerId, env);
+        return;
+    }
+    if (data === 'cmd_namaz_words') {
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, '📿');
+        await cmdNamazWords(botToken, chatId, env, 1);
+        return;
+    }
+    if (data.startsWith('namaz_words_')) {
+        const page = parseInt(data.replace('namaz_words_', ''), 10);
+        const _s = await getSettings(chatId, env);
+        const _l = _s.language || 'az';
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, `📄 ${_l === 'tr' ? 'Sayfa' : 'Səhifə'} ${page}`);
+        await cmdNamazWords(botToken, chatId, env, page);
+        return;
+    }
     if (data.startsWith('nlog_')) {
         // Format: nlog_{prayer}_{YYYY-MM-DD}
         const parts = data.replace('nlog_', '').split('_');
@@ -3074,6 +4270,7 @@ async function handleCallbackQuery(callbackQuery, env) {
             await telegramAnswerCallbackQuery(botToken, callbackQuery.id, t('prayer_done', lang).replace('{prayer}', pName));
         }
         await savePrayerLog(chatId, logDate, prayerLog, env);
+        await updatePrayerStats(chatId, logDate, prayerLog, env);
 
         // Mesajı yenilə
         const cityId = settings.city || 'baku';
@@ -3172,6 +4369,68 @@ async function handleCallbackQuery(callbackQuery, env) {
         await telegramAnswerCallbackQuery(botToken, callbackQuery.id, '📅');
         const baku = getBakuNow();
         await cmdCevir(botToken, chatId, baku.dateStr, env);
+        return;
+    }
+
+    // ── Quran və Dualar Əmrləri ──
+    if (data === 'cmd_quran_menu') {
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, '📖');
+        await cmdQuranMenu(botToken, chatId, env);
+        return;
+    }
+    if (data === 'cmd_gunun_ayesi') {
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, '📖');
+        await cmdGununAyesi(botToken, chatId, env, false);
+        return;
+    }
+    if (data === 'cmd_gunun_ayesi_random') {
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, '🔄');
+        await cmdGununAyesi(botToken, chatId, env, true);
+        return;
+    }
+    if (data.startsWith('cmd_qisa_sureler_')) {
+        const page = parseInt(data.replace('cmd_qisa_sureler_', ''), 10);
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, `📖 ${page}`);
+        await cmdQisaSureler(botToken, chatId, env, page);
+        return;
+    }
+    if (data.startsWith('sure_detail_')) {
+        const sureId = data.replace('sure_detail_', '');
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, '📖');
+        await cmdSureDetail(botToken, chatId, sureId, env);
+        return;
+    }
+    if (data === 'cmd_quran_popular') {
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, '🌟');
+        await cmdPopularSurahs(botToken, chatId, env);
+        return;
+    }
+    if (data.startsWith('qlist_')) {
+        const parts = data.split('_'); // qlist_page_sortType
+        const page = parseInt(parts[1], 10) || 1;
+        const sortType = parts[2] || 'mushaf';
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, `📖 ${page}`);
+        await cmdAllQuranList(botToken, chatId, page, sortType, env);
+        return;
+    }
+    if (data.startsWith('qread_')) {
+        const parts = data.split('_'); // qread_surahNum_page_sortType
+        const surahNum = parseInt(parts[1], 10);
+        const page = parseInt(parts[2], 10) || 1;
+        const sortType = parts[3] || 'mushaf';
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, `📖 ${surahNum}`);
+        await cmdReadSurah(botToken, chatId, surahNum, page, sortType, env);
+        return;
+    }
+    if (data === 'cmd_dualar_menu') {
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, '🤲');
+        await cmdDualarMenu(botToken, chatId, env);
+        return;
+    }
+    if (data.startsWith('dua_cat_')) {
+        const catId = data.replace('dua_cat_', '');
+        await telegramAnswerCallbackQuery(botToken, callbackQuery.id, '🤲');
+        await cmdDuaCategory(botToken, chatId, catId, env);
         return;
     }
 
@@ -3711,6 +4970,16 @@ async function handleWebhook(request, env) {
 
     const chatId = message.chat.id;
     const text = message.text.trim();
+
+    // Direct ayah reference check (e.g. 2:255 or 36:58)
+    const directMatch = text.match(/^(\d+):(\d+)$/);
+    if (directMatch) {
+        const surahNum = parseInt(directMatch[1], 10);
+        const ayahNum = parseInt(directMatch[2], 10);
+        await cmdSearchAyah(env.BOT_TOKEN, chatId, surahNum, ayahNum, env);
+        return new Response('OK', { status: 200 });
+    }
+
     const botToken = env.BOT_TOKEN;
 
     // ── İstifadəçini izlə (KV-yə yaz) ──
@@ -3722,8 +4991,14 @@ async function handleWebhook(request, env) {
         return new Response('OK', { status: 200 });
     }
 
+    // ── /namazinfo | /namazbilgi | /namaz_kilavuzu ──
+    if (text.startsWith('/namazinfo') || text.startsWith('/namazbilgi') || text.startsWith('/namaz_kilavuzu') || text.startsWith('/namaz_qaydasi') || text.startsWith('/namaz_qaydası')) {
+        await cmdNamazInfo(botToken, chatId, env);
+        return new Response('OK', { status: 200 });
+    }
+
     // ── /namazlarim | /namazlarım ──
-    if (text.startsWith('/namazlarim') || text.startsWith('/namazlarım') || text.startsWith('/namaz') || text.startsWith('/todo')) {
+    if (text.startsWith('/namazlarim') || text.startsWith('/namazlarım') || text.startsWith('/todo')) {
         await cmdNamazlarim(botToken, chatId, env);
         return new Response('OK', { status: 200 });
     }
@@ -3824,6 +5099,46 @@ async function handleWebhook(request, env) {
     // ── /statistika | /istatistik ──
     if (text.startsWith('/statistika') || text.startsWith('/stats') || text.startsWith('/istatistik')) {
         await cmdRamazanStats(botToken, chatId, env);
+        return new Response('OK', { status: 200 });
+    }
+
+    // ── /quran | /kuran ──
+    if (text.startsWith('/quran') || text.startsWith('/kuran')) {
+        const arg = text.replace(/^\/(quran|kuran)\s*/, '').trim();
+        const match = arg.match(/^(\d+):(\d+)$/);
+        if (match) {
+            const surahNum = parseInt(match[1], 10);
+            const ayahNum = parseInt(match[2], 10);
+            await cmdSearchAyah(botToken, chatId, surahNum, ayahNum, env);
+        } else {
+            await cmdQuranMenu(botToken, chatId, env);
+        }
+        return new Response('OK', { status: 200 });
+    }
+
+    // ── /sureler | /sure ──
+    if (text.startsWith('/sureler') || text.startsWith('/sure') || text.startsWith('/surə')) {
+        await cmdQisaSureler(botToken, chatId, env, 1);
+        return new Response('OK', { status: 200 });
+    }
+
+    // ── /aye | /ayet ──
+    if (text.startsWith('/aye') || text.startsWith('/ayet') || text.startsWith('/ayə')) {
+        const arg = text.replace(/^\/(aye|ayet|ayə)\s*/, '').trim();
+        const match = arg.match(/^(\d+):(\d+)$/);
+        if (match) {
+            const surahNum = parseInt(match[1], 10);
+            const ayahNum = parseInt(match[2], 10);
+            await cmdSearchAyah(botToken, chatId, surahNum, ayahNum, env);
+        } else {
+            await cmdGununAyesi(botToken, chatId, env, false);
+        }
+        return new Response('OK', { status: 200 });
+    }
+
+    // ── /dualar ──
+    if (text.startsWith('/dualar')) {
+        await cmdDualarMenu(botToken, chatId, env);
         return new Response('OK', { status: 200 });
     }
 
@@ -4015,6 +5330,17 @@ async function buildDailySchedule(env) {
                     userId: uid, type: 'morning',
                     prayer: null, prayerTime: null, cityId, lang,
                 });
+            }
+
+            // prayerTracking aktiv olan istifadəçilər üçün bugünkü prayer_log-u yarat
+            if (settings.prayerTracking) {
+                const pLogKey = `prayer_log:${uid}:${isoDate}`;
+                const existingLog = await env.NOTIFICATIONS_KV.get(pLogKey);
+                if (!existingLog) {
+                    const defaults = {};
+                    for (const p of TRACKED_PRAYERS) { defaults[p] = null; }
+                    await env.NOTIFICATIONS_KV.put(pLogKey, JSON.stringify(defaults), { expirationTtl: 604800 });
+                }
             }
         }
     }
@@ -4310,9 +5636,19 @@ async function handleScheduled(env, ctx) {
                 const allUsers = await getAllUserIds(env);
                 for (const uid of allUsers) {
                     try {
+                        const userSettings = await getSettings(uid, env);
                         const logKey = `prayer_log:${uid}:${yesterdayStr}`;
-                        const prayerLog = await env.NOTIFICATIONS_KV.get(logKey, 'json');
-                        if (!prayerLog) continue; // Bu istifadəçi heç istifadə etməyib, skip
+                        let prayerLog = await env.NOTIFICATIONS_KV.get(logKey, 'json');
+
+                        // Əgər prayer_log yoxdursa:
+                        // - prayerTracking aktiv olan istifadəçilər üçün bütün namazlar qəza sayılır
+                        // - tracking aktiv olmayan istifadəçilər skip edilir
+                        if (!prayerLog) {
+                            if (!userSettings.prayerTracking) continue;
+                            // Tracking aktiv amma heç bir namaz işarələnməyib → hamısı qəza
+                            prayerLog = {};
+                            for (const p of TRACKED_PRAYERS) { prayerLog[p] = null; }
+                        }
 
                         let missedCount = 0;
                         const missed = await getMissedPrayers(uid, env);
@@ -4330,9 +5666,9 @@ async function handleScheduled(env, ctx) {
                             await saveMissedPrayers(uid, missed, env);
                             // Dünənki logu yenilə (false ilə)
                             await env.NOTIFICATIONS_KV.put(logKey, JSON.stringify(prayerLog), { expirationTtl: 604800 });
+                            await updatePrayerStats(uid, yesterdayStr, prayerLog, env);
 
                             // İstifadəçiyə xəbər ver
-                            const userSettings = await getSettings(uid, env);
                             const uLang = userSettings.language || 'az';
                             const autoMsg = t('namazlarim_auto_qaza', uLang).replace('{count}', missedCount);
                             try {
