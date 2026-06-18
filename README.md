@@ -8,6 +8,9 @@ Bakı şəhəri üçün namaz vaxtlarını bildirən, Hicri təqvim, Ramazan rej
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
+## 🚀 Botu istifadə et
+
+[![Telegram-da aç](https://img.shields.io/badge/Telegram-da%20Aç-26A5E4?style=for-the-badge&logo=telegram)](https://t.me/namazvaxti_bot)
 
 ## ✨ Xüsusiyyətlər
 
